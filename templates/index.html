@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AP EAPCET College Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    .hero {
+      padding-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container hero">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">🎓 AP EAPCET College Predictor</h1>
+      <p class="lead text-muted">Find out which colleges you may get based on your rank and preferences.</p>
+    </div>
+
+    <div class="card p-4">
+      <form action="/predict" method="post">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">EAPCET Rank</label>
+            <input type="number" class="form-control" name="rank" required min="1">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Gender</label>
+            <select class="form-select" name="gender" required>
+              <option value="">Select</option>
+              <option value="MALE">Male</option>
+              <option value="FEMALE">Female</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Category</label>
+            <select class="form-select" name="category" required>
+              <option value="">Select</option>
+              <option value="OC">OC</option>
+              <option value="SC">SC</option>
+              <option value="ST">ST</option>
+              <option value="BCA">BCA</option>
+              <option value="BCB">BCB</option>
+              <option value="BCC">BCC</option>
+              <option value="BCD">BCD</option>
+              <option value="BCE">BCE</option>
+              <option value="EWS">EWS</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Preferred Branch (optional)</label>
+            <input type="text" class="form-control" name="branch" placeholder="e.g. CSE">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Preferred District (optional)</label>
+            <input type="text" class="form-control" name="district" placeholder="e.g. Krishna">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">College Type (optional)</label>
+            <select class="form-select" name="college_type">
+              <option value="">Any</option>
+              <option value="PVT">Private</option>
+              <option value="GOV">Government</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4 text-center">
+          <button class="btn btn-primary btn-lg">🔍 Predict Eligible Colleges</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
