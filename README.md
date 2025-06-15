@@ -1,5 +1,4 @@
 
-````markdown
 # 🎓 AP EAPCET College Predictor
 
 A web-based tool to help students predict eligible engineering colleges based on their AP EAPCET rank, gender, category, and preferences using last year's cutoff data.
